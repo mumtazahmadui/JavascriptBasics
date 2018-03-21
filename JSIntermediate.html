@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Intermediate</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            // ************* Part 1 *************
+            // Create a function called starString() that takes a number and returns a string of that many *
+            // **********************************
+            // function starString(n)
+            // {
+            //     let result = "";
+            //     let star = "*";
+            //     let times = n;
+            //     while(times > 0)
+            //     {
+            //         result += star;
+            //         times--;
+            //     }
+            //     return result;
+            // }
+            // let test = starString(6);
+            // console.log(test);
+
+            // ************* Part 2 *************
+            // Create a function called drawStars() that takes an array of numbers and prints out *
+            // **********************************
+            // function drawStars(arr)
+            // {
+            //     for(let i = 0; i < arr.length; i++)
+            //     {
+            //         let result = starString(arr[i]);
+            //         console.log(result);
+            //     }
+            // }
+            // let test = [6, 10, 4, 5, 13, 7, 8, 1, 3];
+            // drawStars(test);
+
+            // ************* Part 3 *************
+            // Modify the function above. Allow an array containing integers and strings to be passed to the drawStars() function. When a string is passed, instead of displaying *, display the first letter of the string according to the example below. You may use the .toLowerCase() string method for this part
+            // **********************************
+            // function drawStars(arr)
+            // {
+            //     for(let i = 0; i < arr.length; i++)
+            //     {
+            //         if(typeof arr[i] == 'number')
+            //         {
+            //             let result = starString(arr[i]);
+            //             console.log(result);
+            //         }
+            //         else
+            //         {
+            //             let result = "";
+            //             let letter = arr[i].charAt(0);
+            //             let times = arr[i].length;
+            //             while(times > 0)
+            //             {
+            //                 result += letter.toLowerCase();
+            //                 times--;
+            //             }
+            //             console.log(result);
+            //         }
+            //     }
+            // }
+            // let test = [4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]
+            // drawStars(test);
+        </script>
+    </body>
+</html>

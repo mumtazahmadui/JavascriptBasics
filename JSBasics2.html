@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Basics 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            function magic_multiply(x, y)
+            {
+                if(x == 0 && y == 0)
+                {
+                    return "All inputs 0";
+                }
+                if(Array.isArray(x))
+                {
+                    let result = []
+                    for(let i = 0; i < x.length; i++)
+                    {
+                        let l = x[i] * y;
+                        result.push(l);
+                    }
+                    return result;
+                }
+                if(typeof x == 'number' && typeof y == 'string')
+                {
+                    return "Error: Cannot multiply number by string";
+                }
+                if(typeof x == 'string' && typeof y == 'number')
+                {
+                    let repeatedString = "";
+                    let string = x; 
+                    let times = y;
+                    while (times > 0)
+                    {
+                        repeatedString += string;
+                        times--;
+                    }
+                    return repeatedString;
+                }
+                x = x * y;
+                return x;
+            }
+
+            let test1 = magic_multiply(5, 2);
+            console.log(test1);
+            let test2 = magic_multiply(0, 0);
+            console.log(test2);
+            let test3 = magic_multiply([1, 2, 3], 2);
+            console.log(test3);
+            let test4 = magic_multiply(7, "three");
+            console.log(test4);
+            let test5 = magic_multiply("Brendo", 4);
+            console.log(test5);
+        </script>
+    </body>
+</html>
